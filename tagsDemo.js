@@ -13,10 +13,10 @@ function matchArray(value, arrayToMatch) {
 }
 $(document).ready(function(){
     //as we start writing
-    $("#testInput").keydown(function (e) {
+    $("#skillInput").keydown(function (e) {
         // x repesent the keycode for whatever was typed 
         var x = e.which || e.keyCode;
-        var typedValue = $("#testInput").val();
+        var typedValue = $("#skillInput").val();
 
         //key:  BackSpace(8)
         if (x == 8) {
@@ -40,10 +40,10 @@ $(document).ready(function(){
                     } else {
                         $(".input-box").prepend('<li class="input-tag"><span class="skill">' + typedValue + '</span> <a class="xbutton" href="#">&times;</a> </li>');
                     }
-                    $("#testInput").val("");
+                    $("#skillInput").val("");
                 } else {
                     console.log("Match Found");
-                    $("#testInput").val("");
+                    $("#skillInput").val("");
                 }
             }
         }
@@ -53,7 +53,7 @@ $(document).ready(function(){
             var index = jQuery.inArray(delVal, usertags);
             if (index >= 0) {
                 $(this).closest("li").remove();
-                tagsArray.splice(index, 1);
+                usertags.splice(index, 1);
             }
         }); 
     });
